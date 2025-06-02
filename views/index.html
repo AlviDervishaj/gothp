@@ -1,0 +1,16 @@
+{{ define "content" }}
+<h2 class="text-2xl font-semibold">Welcome!</h2>
+<p>
+  This is a minimal GOTH stack template with Go, HTMX, Tailwind, and PostgreSQL.
+</p>
+
+<!-- Example HTMX button to fetch partial -->
+<button
+  class="mt-4 px-4 py-2 bg-blue-500 text-white"
+  hx-get="/htmx/hello"
+  hx-target="#htmx-fragment"
+>
+  Say Hello (HTMX)
+</button>
+<div id="htmx-fragment" class="mt-4 text-lg"></div>
+{{ end }}
